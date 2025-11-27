@@ -1,0 +1,79 @@
+:root{
+  --green:#16c37b;
+  --dark:#0f0f0f;
+  --light:#ffffff;
+  --gray:#f3f3f3;
+  --gradient:linear-gradient(90deg,#17e49a,#17b2f0);
+}
+body{
+  margin:0;
+  font-family:"Poppins", sans-serif;
+  background:#ffffff;
+  color:#000;
+  display:flex;
+  justify-content:center;
+}
+.container{
+  width:100%;
+  max-width:500px;
+  padding:20px;
+  text-align:center;
+}
+.logo{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  margin:20px auto;
+  display:block;
+}
+.verified{
+  font-size:26px;
+  font-weight:700;
+  margin-top:10px;
+}
+.trusted{
+  color:var(--green);
+  font-size:20px;
+  margin-bottom:20px;
+}
+.box{
+  background:#000;
+  color:#fff;
+  padding:15px;
+  border-radius:12px;
+  margin:20px 0;
+  font-size:16px;
+}
+.btn-whatsapp{
+  display:block;
+  background:var(--green);
+  color:#fff;
+  padding:15px;
+  font-size:20px;
+  font-weight:600;
+  text-decoration:none;
+  border-radius:50px;
+  margin:25px 0;
+}
+.clientes{
+  background:var(--gradient);
+  padding:12px;
+  border-radius:30px;
+  color:#fff;
+  margin-bottom:20px;
+  font-weight:600;
+}
+.reviews{
+  background:#e9f6f4;
+  padding:15px;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+.bonus{
+  background:#ff4d4d;
+  padding:15px;
+  color:#fff;
+  border-radius:12px;
+  font-weight:600;
+  margin-top:30px;
+}
