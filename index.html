@@ -1,87 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Plataforma Verificada – 463 (recreación)</title>
-  <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#ffcc00;--muted:#9aa4b2;--white:#ffffff}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#071025 0%, #0b1220 100%);color:var(--white);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
-    .container{width:100%;max-width:760px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:16px;padding:28px;box-shadow:0 8px 30px rgba(2,6,23,.6)}
-    header{display:flex;gap:12px;align-items:center}
-    .logo{width:64px;height:64px;background:linear-gradient(135deg,var(--accent),#e6a800);border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#071427}
-    h1{margin:0;font-size:1.6rem}
-    h2{margin:.25rem 0 18px;color:var(--muted);font-weight:600}
-    .hero{display:flex;gap:20px;align-items:center}
-    .left{flex:1}
-    .right{width:180px;text-align:center}
-    .whatsapp-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;background:linear-gradient(90deg,#25D366,#128C7E);color:#06201a;text-decoration:none;font-weight:700}
-    .stats{margin-top:18px;display:flex;gap:12px;align-items:center}
-    .stat{background:rgba(255,255,255,0.02);padding:10px 12px;border-radius:10px}
-    .trust{display:flex;gap:8px;align-items:center;margin-top:12px}
-    .images-row{display:flex;gap:8px;margin-top:18px}
-    .thumb{flex:1;height:86px;border-radius:10px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:var(--muted)}
-    footer{margin-top:20px;border-top:1px solid rgba(255,255,255,0.03);padding-top:14px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
-    .badge{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-weight:700}
-    @media (max-width:640px){.hero{flex-direction:column}.right{width:100%}}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma Verificada</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <header>
-      <div class="logo">463</div>
-      <div>
-        <h1>✅ Plataforma Verificada ✅</h1>
-        <h2>Casino de Confianza</h2>
-      </div>
-    </header>
+    <img src="./img/logo.png" alt="logo" class="logo" />
 
-    <section class="hero">
-      <div class="left">
-        <p>Te estamos conectando con nuestro equipo vía WhatsApp.</p>
-        <p><a class="whatsapp-btn" href="https://wa.me/5491123456789?text=Hola%20quiero%20mi%20bono" target="_blank" rel="noreferrer noopener">Ir a WhatsApp Ahora</a></p>
+    <div class="verified">✅ Plataforma Verificada ✅</div>
+    <div class="trusted">Casino de Confianza</div>
 
-        <div class="images-row" aria-hidden="true">
-          <div class="thumb">Imagen 1</div>
-          <div class="thumb">Imagen 2</div>
-          <div class="thumb">Imagen 3</div>
-        </div>
+    <div class="box">Te estamos conectando con nuestro equipo vía WhatsApp.</div>
 
-        <div class="stats" role="status">
-          <div class="stat">+10.000 CLIENTES GANANDO todos los días</div>
-          <div class="stat">"Excelente"</div>
-          <div class="stat">Calificación 4.9/5</div>
-        </div>
+    <a class="btn-whatsapp" href="https://wa.me/XXXXXXXXXX" target="_blank">Ir a WhatsApp Ahora</a>
 
-        <div class="trust">
-          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='92' height='28'><rect width='92' height='28' fill='%23ffffff' fill-opacity='0.06' rx='6'/><text x='8' y='18' font-size='12' fill='%23ffffff'>Trustpilot</text></svg>" alt="Trustpilot" style="height:28px"/>
-        </div>
+    <div class="clientes">+10.000 CLIENTES GANANDO todos los días</div>
 
-      </div>
+    <div class="reviews">"Excelente" ⭐⭐⭐⭐⭐ – Calificación 4.9/5</div>
 
-      <aside class="right">
-        <div class="badge">BONO ACTIVO AL 200%</div>
-        <div style="margin-top:12px;background:rgba(255,255,255,0.02);padding:12px;border-radius:12px">
-          <strong>Carlos Pérez</strong>
-          <div>Premio PAGADO$$</div>
-          <div style="font-size:.9rem;color:var(--muted)">Desde Buenos Aires • hace 1 hora</div>
-        </div>
-      </aside>
-    </section>
-
-    <footer>
-      <div>© 2025 463. Todos los derechos reservados.</div>
-      <div style="display:flex;gap:10px;align-items:center"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><circle cx='10' cy='10' r='9' fill='%23ffcc00'/></svg>" alt="won"/><span style="color:var(--muted)">Plataforma Verificada</span></div>
-    </footer>
+    <div class="bonus">🎁 BONO ACTIVO AL 200% – ¡Solicitalo ahora por WhatsApp!</div>
   </div>
-
-  <script>
-    // Pequeñas mejoras: ejemplo de animación leve para la btn
-    document.addEventListener('DOMContentLoaded',()=>{
-      const btn = document.querySelector('.whatsapp-btn');
-      if(btn) btn.addEventListener('click',()=>{console.log('Ir a WhatsApp');});
-    });
-  </script>
 </body>
 </html>
