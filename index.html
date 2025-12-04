@@ -16,9 +16,14 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1398214718537833');
-    fbq('track', 'PageView');
+    
+    fbq('init', '1398214718537833');     // Tu Pixel
+    fbq('track', 'PageView');            // Evento estándar
+    
+    // Evento Lead Optimizado
+    fbq('track', 'Lead');
   </script>
+
   <noscript>
     <img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1398214718537833&ev=PageView&noscript=1"/>
@@ -27,6 +32,7 @@
 
 </head>
 <body>
+
   <div class="container">
     <img src="file_000000009fec71f5be7741ca822b800a.png" alt="logo" class="logo" />
 
@@ -35,15 +41,17 @@
 
     <div class="box">Te estamos conectando con nuestro equipo vía WhatsApp.</div>
 
-    <a class="btn-whatsapp" href="https://wa.me/3875651186" target="_blank">
-      Ir a WhatsApp Ahora
+    <!-- BOTÓN DE WHATSAPP CON EVENTO DE CONVERSIÓN -->
+    <a 
+      href="https://wa.me/3884651165"
+      target="_blank"
+      class="whatsapp-button"
+      onclick="fbq('track', 'ClickWA');"
+    >
+      Hablar por WhatsApp
     </a>
 
-    <div class="clientes">+10.000 CLIENTES GANANDO todos los días</div>
-
-    <div class="reviews">"Excelente" ⭐⭐⭐⭐⭐ – Calificación 4.9/5</div>
-
-    <div class="bonus">🎁 BONO ACTIVO AL 200% – ¡Solicitalo ahora por WhatsApp!</div>
   </div>
+
 </body>
 </html>
