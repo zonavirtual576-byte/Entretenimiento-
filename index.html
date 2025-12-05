@@ -1,153 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bono 100% - Promo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#07030b;
-      --gold:#f6c23e;
-      --gold-dark:#b37d14;
-      --green:#19a974;
-      --green-dark:#178e5f;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:'Montserrat',sans-serif;background:var(--bg);}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bonu$ de Bienvenida</title>
 
-    /* layout */
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:40px 20px;
-      position:relative;
-      overflow:hidden;
-      color:var(--gold);
-      text-align:center;
-    }
+<!-- ======================
+        META PIXEL
+======================= -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
 
-    /* electric lightning background using radial and linear gradients */
-    .hero::before,
-    .hero::after{
-      content:"";position:absolute;inset:0;z-index:0;mix-blend-mode:screen;opacity:0.95;
-      background:
-        radial-gradient(ellipse at 20% 20%, rgba(255,140,0,0.18) 0%, transparent 20%),
-        radial-gradient(ellipse at 80% 40%, rgba(30,144,255,0.12) 0%, transparent 18%),
-        radial-gradient(ellipse at 50% 60%, rgba(255,200,50,0.06) 0%, transparent 25%),
-        linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.85));
-      filter:blur(18px);
+  fbq('init', 'TU_PIXEL_ID_AQUI');  
+  fbq('track', 'PageView');
+</script>
+
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=TU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/>
+</noscript>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(180deg, #3b0066, #4f048a);
+        color: white;
+        text-align: center;
     }
 
-    /* top headline */
-    .headline{
-      font-weight:900;
-      z-index:2;
-      text-transform:uppercase;
-      letter-spacing:2px;
-      text-shadow:0 6px 18px rgba(0,0,0,0.6), 0 2px 0 rgba(255,255,255,0.03);
-    }
-    .headline .small{display:block;font-size:20px;margin-bottom:6px;color:#ffd976;}
-    .headline .big{font-size:64px;line-height:0.95;color:var(--gold);padding-bottom:20px}
-
-    /* main pill button (BONO 100%) */
-    .pill-wrap{z-index:3;display:flex;align-items:center;justify-content:center;margin:18px 0 8px}
-    .pill{
-      background:linear-gradient(180deg,#1b7a2f 0%, #0f6b2a 100%);
-      border-radius:60px;
-      padding:34px 80px;
-      box-shadow:0 20px 50px rgba(0,0,0,0.6), 0 0 36px rgba(255,165,0,0.06) inset;
-      transform:translateY(0);
-      transition:transform .18s ease;
-      display:inline-block;
-      position:relative;
-      border:6px solid rgba(255,255,255,0.03);
-    }
-    .pill:hover{transform:translateY(-6px) scale(1.02)}
-    .pill-text{
-      font-size:56px;
-      font-weight:900;
-      color:var(--gold);
-      text-shadow:0 6px 0 rgba(0,0,0,0.5), 0 6px 18px rgba(255,165,0,0.12);
-      letter-spacing:2px;
+    h1 {
+        margin-top: 40px;
+        font-size: 32px;
+        color: #ffdf37;
+        font-weight: 800;
+        text-shadow: 0 0 10px rgba(255, 216, 60, 0.6);
     }
 
-    /* realistic finger placeholder */\    
-    .hand{
-      position:relative;z-index:3;margin-top:-18px;display:block;transform:translateY(6px);
-      filter:drop-shadow(0 16px 30px rgba(0,0,0,0.6));
+    .logo {
+        width: 150px; 
+        margin: 20px auto;
+        display: block;
+        border-radius: 15px;
     }
 
-    /* CTA area */
-    .cta{z-index:4;margin-top:28px}
-    .cta h2{font-size:36px;margin:0;color:#ffd760;text-shadow:0 6px 18px rgba(0,0,0,0.6)}
-
-    /* WhatsApp button with effect */
-    .whatsapp-btn{
-      display:inline-flex;align-items:center;gap:12px;margin-top:18px;padding:14px 26px;border-radius:36px;background:linear-gradient(180deg,var(--green) 0%, var(--green-dark) 100%);
-      color:white;text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(24,150,100,0.28), 0 0 0 rgba(25,169,116,0.0);border:2px solid rgba(255,255,255,0.04);
-      transform:translateZ(0);position:relative;overflow:hidden;
-    }
-    .whatsapp-btn svg{width:22px;height:22px;flex:0 0 22px}
-
-    /* pulse glow */\    
-    .whatsapp-btn::before{
-      content:"";position:absolute;inset:-10px;z-index:-1;border-radius:40px;background:radial-gradient(circle at 20% 30%, rgba(25,169,116,0.45) 0%, transparent 25%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0%, transparent 35%);
-      filter:blur(12px);opacity:0;transition:opacity .25s ease, transform .25s ease;
-    }
-    .whatsapp-btn:hover{transform:scale(1.03);box-shadow:0 18px 48px rgba(25,169,116,0.32)}
-    .whatsapp-btn:hover::before{opacity:1;transform:scale(1.03)}
-
-    /* small foot */
-    .foot{color:#fff;font-weight:700;margin-top:18px;opacity:0.85}
-
-    /* responsive */
-    @media (max-width:640px){
-      .headline .big{font-size:42px}
-      .pill{padding:22px 40px}
-      .pill-text{font-size:36px}
-      .cta h2{font-size:26px}
+    .box {
+        margin: 30px auto;
+        padding: 20px;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
-  </style>
+    .btn-wsp {
+        display: block;
+        margin: 20px auto;
+        width: 80%;
+        padding: 18px;
+        font-size: 22px;
+        font-weight: 700;
+        border-radius: 50px;
+        background: #00d960;
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 0 15px #00d960;
+        animation: glow 1.8s infinite ease-in-out;
+    }
+
+    @keyframes glow {
+        0% { box-shadow: 0 0 12px #00d960; }
+        50% { box-shadow: 0 0 28px #00ff73; }
+        100% { box-shadow: 0 0 12px #00d960; }
+    }
+
+    table {
+        width: 90%;
+        margin: 30px auto;
+        border-collapse: collapse;
+        color: #ffdf37;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    td {
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+</style>
 </head>
+
 <body>
-  <main class="hero">
-    <div>
-      <div class="headline" style="margin-bottom:6px">
-        <span class="small">Con tu primer depósito</span>
-        <div class="big">100% EXTRA<br>EN FICHAS</div>
-      </div>
 
-      <div class="pill-wrap">
-        <div class="pill" aria-hidden="true">
-          <div class="pill-text">BONO 100%</div>
-        </div>
-      </div>
+    <h1>¡SUPER BONU$ DE BIENVENIDA!</h1>
 
-      <!-- decorative "hand" (SVG simple illustration) -->
-      <div class="hand" aria-hidden="true">
-        <!-- simple stylized finger SVG -->
-        <svg width="160" height="110" viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 70 C18 40,50 28,70 34 C86 39,102 44,118 48 C128 51,136 64,134 76 C132 90,120 100,100 100 C76 100,46 96,18 70 Z" fill="rgba(255,180,80,0.9)"/>
-        </svg>
-      </div>
+    <!-- Logo insertado con clase correcta -->
+    <img class="logo" 
+         src="1764908451022.jpg" 
+         alt="Logo">
 
-      <div class="cta">
-        <h2>¡Estás a un click!</h2>
+    <div class="box">
+        <p style="font-size: 18px; margin-bottom: 10px;">
+            Escribinos apretando el botón de abajo
+        </p>
 
-        <!-- WhatsApp link: Argentina country code 54 + 9 for mobile? using international format for wa.me -->
-        <a class="whatsapp-btn" href="https://wa.me/5493875651186?text=Hola%20quiero%20mi%20BONO%20100%25" target="_blank" rel="noopener noreferrer">
-          <!-- WhatsApp SVG icon -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="white" d="M20.52 3.48A11.93 11.93 0 0012.02 1C6.48 1 2 5.48 2 11c0 1.94.5 3.83 1.45 5.49L2 23l6.67-1.36A10.93 10.93 0 0012 22c5.52 0 10-4.48 10-10 0-1.84-.5-3.56-1.48-5.02zM12 20.2c-.86 0-1.7-.16-2.48-.47L7 19l.35-1.94A9.16 9.16 0 013.8 11C3.8 6.57 7.59 3 12 3c2.37 0 4.58.87 6.26 2.46A8.15 8.15 0 0120.2 11c0 4.42-3.58 8.2-8.2 8.2z"/></svg>
-          <span>Pedí TU BONO ACÁ</span>
+        <a 
+            class="btn-wsp" 
+            href="https://wa.me/5493875651186" 
+            target="_blank"
+            onclick="fbq('track', 'Contact');">
+            WHATSAPP OFFICIAL
         </a>
 
-        <div class="foot">JUGÁS, GANÁS, RETIRÁS.</div>
-      </div>
+        <p style="font-size: 15px; margin-top: 10px;">
+            ATENCIÓN Y RETIROS SIN LÍMITES LAS 24 HS
+        </p>
     </div>
-  </main>
+
+    <table>
+        <tr>
+            <td>¡SUPER BONU$!</td>
+            <td>2000</td>
+            <td>4000</td>
+        </tr>
+    </table>
+
 </body>
 </html>
