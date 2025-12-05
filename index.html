@@ -19,19 +19,15 @@
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--gold-1)}
 
-    /* full hero center */
     .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px;position:relative;overflow:hidden}
-
-    /* electric bolts background done with SVG overlay */
     .bg-svg{position:absolute;inset:0;z-index:0;pointer-events:none}
 
-    /* top text */
     .top-text{z-index:3;text-align:center;margin-bottom:14px}
     .top-text .small{display:block;font-size:20px;letter-spacing:2px;color:#ffd976;text-transform:uppercase}
     .top-text .large{font-size:72px;line-height:0.95;margin-top:6px;font-weight:900;color:var(--gold-1);text-shadow:0 10px 22px rgba(0,0,0,0.6);}
 
-    /* central pill (BONO 100%) */
     .center{z-index:4;position:relative;display:flex;flex-direction:column;align-items:center}
+
     .pill{
       --padX:110px;
       display:inline-block;padding:36px var(--padX);border-radius:80px;background:linear-gradient(180deg,var(--pill-green) 0%, var(--pill-green-dark) 100%);
@@ -41,32 +37,22 @@
     }
     .pill:after{content:'';position:absolute;inset:0;border-radius:80px;box-shadow:0 18px 36px rgba(255,160,30,0.07) inset;pointer-events:none}
     .pill:hover{transform:translateY(-8px) scale(1.03);box-shadow:0 40px 100px rgba(0,0,0,0.75)}
-
     .pill-text{font-weight:900;font-size:64px;color:var(--gold-1);letter-spacing:2px;text-shadow:0 8px 0 rgba(0,0,0,0.6),0 16px 36px rgba(255,160,30,0.08)}
 
-    /* finger / hand graphic positioned to point at pill */
     .hand{margin-top:-28px;transform:translateY(6px);filter:drop-shadow(0 20px 40px rgba(0,0,0,0.6));z-index:4}
-
-    /* CTA area */
     .cta{z-index:4;margin-top:26px;text-align:center}
     .cta h3{font-size:36px;margin:0;color:#ffd960;text-shadow:0 8px 20px rgba(0,0,0,0.6)}
 
-    /* WhatsApp button */
     .wh-btn{display:inline-flex;align-items:center;gap:12px;margin-top:18px;padding:14px 26px;border-radius:40px;background:linear-gradient(180deg,var(--wh-green) 0%, var(--wh-green-dark) 100%);color:#fff;text-decoration:none;font-weight:800;box-shadow:0 16px 40px rgba(37,211,102,0.18), 0 6px 18px rgba(0,0,0,0.5);position:relative;overflow:hidden}
     .wh-btn svg{width:22px;height:22px;flex:0 0 22px}
-
-    /* pulsing ring */
     .wh-btn::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.9);width:120%;height:120%;border-radius:40px;background:radial-gradient(circle at 30% 30%, rgba(37,211,102,0.22), transparent 35%);opacity:0;transition:opacity .25s ease, transform .25s ease}
     .wh-btn:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 28px 60px rgba(37,211,102,0.28)}
     .wh-btn:hover::before{opacity:1;transform:translate(-50%,-50%) scale(1.03)}
 
-    /* small footer text */
     .foot{z-index:4;margin-top:14px;color:#fff;font-weight:700;opacity:0.9}
 
-    /* poker chip for decoration */
     .chip{position:absolute;left:8%;bottom:10%;width:120px;z-index:2;filter:drop-shadow(0 12px 28px rgba(0,0,0,0.6))}
 
-    /* responsive tweaks */
     @media (max-width:720px){
       .top-text .large{font-size:44px}
       .pill{--padX:48px;padding:22px 48px}
@@ -77,8 +63,16 @@
   </style>
 </head>
 <body>
+
+  <!-- LOGO NUEVO -->
+  <div style="position:absolute; top:20px; left:20px; z-index:10;">
+    <img src="TU_URL_DEL_LOGO_AQUI"
+         alt="Logo"
+         style="width:auto; height:120px; object-fit:contain;">
+  </div>
+
   <main class="hero">
-    <!-- background lightning SVG - placed behind everything -->
+
     <svg class="bg-svg" viewBox="0 0 1200 1600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <radialGradient id="g1" cx="50%" cy="30%" r="60%">
@@ -89,15 +83,13 @@
       </defs>
       <rect width="100%" height="100%" fill="black" />
       <g opacity="0.9">
-        <!-- multiple jagged paths to imitate lightning -->
-        <path d="M150 300 L220 340 L180 380 L260 420 L230 470 L320 520" stroke="#ff8a00" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
-        <path d="M900 200 L840 260 L900 320 L860 380 L920 440 L860 520" stroke="#2e9bff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
-        <path d="M600 400 L660 460 L620 500 L700 540 L660 600" stroke="#ff8a00" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+        <path d="M150 300 L220 340 L180 380 L260 420 L230 470 L320 520" stroke="#ff8a00" stroke-width="6" fill="none" />
+        <path d="M900 200 L840 260 L900 320 L860 380 L920 440 L860 520" stroke="#2e9bff" stroke-width="6" fill="none" />
+        <path d="M600 400 L660 460 L620 500 L700 540 L660 600" stroke="#ff8a00" stroke-width="6" fill="none" />
       </g>
       <ellipse cx="600" cy="420" rx="420" ry="220" fill="url(#g1)" />
     </svg>
 
-    <!-- decorative chip -->
     <svg class="chip" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
       <circle cx="100" cy="100" r="90" fill="#5b2eb8" />
       <circle cx="100" cy="100" r="64" fill="#3a0f5f" />
@@ -119,8 +111,7 @@
         <div class="pill-text">BONO 100%</div>
       </div>
 
-      <!-- stylized pointing finger - SVG -->
-      <div class="hand" aria-hidden="true">
+      <div class="hand">
         <svg width="220" height="150" viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="skin" x1="0" x2="1">
@@ -138,10 +129,8 @@
       <div class="cta">
         <h3>¡Estás a un click!</h3>
 
-        <!-- WhatsApp link: uses exact number the user provided -->
         <a class="wh-btn" href="https://wa.me/3875651186?text=Hola%20quiero%20mi%20BONO%20100%25" target="_blank" rel="noopener noreferrer">
-          <!-- whatsapp icon -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#fff" d="M20.52 3.48A11.93 11.93 0 0012.02 1C6.48 1 2 5.48 2 11c0 1.94.5 3.83 1.45 5.49L2 23l6.67-1.36A10.93 10.93 0 0012 22c5.52 0 10-4.48 10-10 0-1.84-.5-3.56-1.48-5.02zM12 20.2c-.86 0-1.7-.16-2.48-.47L7 19l.35-1.94A9.16 9.16 0 013.8 11C3.8 6.57 7.59 3 12 3c2.37 0 4.58.87 6.26 2.46A8.15 8.15 0 0120.2 11c0 4.42-3.58 8.2-8.2 8.2z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#fff" d="M20.52 3.48A11.93 11.93 0 0012.02 1C6.48 1 2 5.48 2 11c0 1.94.5 3.83 1.45 5.49L2 23l6.67-1.36A10.93 10.93 0 0012 22c5.52 0 10-4.48 10-10 0-1.84-.5-3.56-1.48-5.02zM12 20.2c-.86 0-1.7-.16-2.48-.47L7 19l.35-1.94A9.16 9.16 0 013.8 11C3.8 6.57 7.59 3 12 3c2.37 0 4.58.87 6.26 2.46A8.15 8.15 0 0120.2 11c0 4.42-3.58 8.2-8.2 8.2z"/></svg>
           <span>Pedí TU BONO ACÁ</span>
         </a>
 
