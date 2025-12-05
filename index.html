@@ -2,137 +2,103 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bonu$ de Bienvenida</title>
-
-<!-- ======================
-        META PIXEL
-======================= -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-
-  fbq('init', 'TU_PIXEL_ID_AQUI');  
-  fbq('track', 'PageView');
-</script>
-
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=TU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/>
-</noscript>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GANAMOS.NET - Bono VIP</title>
 <style>
-    body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(180deg, #3b0066, #4f048a);
-        color: white;
-        text-align: center;
-    }
-
-    h1 {
-        margin-top: 40px;
-        font-size: 32px;
-        color: #ffdf37;
-        font-weight: 800;
-        text-shadow: 0 0 10px rgba(255, 216, 60, 0.6);
-    }
-
-    .logo {
-        width: 150px; 
-        margin: 20px auto;
-        display: block;
-        border-radius: 15px;
-    }
-
-    .box {
-        margin: 30px auto;
-        padding: 20px;
-        width: 90%;
-        max-width: 500px;
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(6px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .btn-wsp {
-        display: block;
-        margin: 20px auto;
-        width: 80%;
-        padding: 18px;
-        font-size: 22px;
-        font-weight: 700;
-        border-radius: 50px;
-        background: #00d960;
-        color: white;
-        text-decoration: none;
-        box-shadow: 0 0 15px #00d960;
-        animation: glow 1.8s infinite ease-in-out;
-    }
-
-    @keyframes glow {
-        0% { box-shadow: 0 0 12px #00d960; }
-        50% { box-shadow: 0 0 28px #00ff73; }
-        100% { box-shadow: 0 0 12px #00d960; }
-    }
-
-    table {
-        width: 90%;
-        margin: 30px auto;
-        border-collapse: collapse;
-        color: #ffdf37;
-        font-size: 18px;
-        font-weight: 600;
-    }
-
-    td {
-        padding: 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
+   html, body {
+       height: 100%;
+       margin: 0;
+       padding: 0;
+   }
+   body {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: #2c096d;
+       color: white;
+       font-family: Arial, sans-serif;
+       text-align: center;
+   }
+   .container {
+       padding: 20px;
+       text-align: center;
+   }
+   .logo {
+       font-size: 48px;
+       font-weight: bold;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-bottom: 10px;
+   }
+   .logo .icon {
+       margin-right: 10px;
+       font-size: 54px;
+       color: #9b59b6;
+   }
+   .vip-text {
+       font-size: 20px;
+       margin-bottom: 20px;
+   }
+   .bonus {
+       font-size: 60px;
+       color: #f7dc6f;
+       margin-bottom: 20px;
+   }
+   .bonus .percent {
+       font-size: 100px;
+       display: block;
+       color: #ff0;
+   }
+   .input-name {
+       padding: 10px;
+       width: 300px;
+       max-width: 80%;
+       border: none;
+       border-radius: 5px;
+       margin-bottom: 20px;
+       font-size: 16px;
+   }
+   .btn-whatsapp {
+       display: inline-flex;
+       align-items: center;
+       background-color: #25d366;
+       color: white;
+       text-decoration: none;
+       padding: 15px 20px;
+       font-size: 18px;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+       transition: background-color 0.3s, box-shadow 0.3s;
+   }
+   .btn-whatsapp:hover {
+       background-color: #1ebe57;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   }
+   .btn-whatsapp svg {
+       width: 24px;
+       height: 24px;
+       margin-right: 10px;
+       fill: white;
+   }
 </style>
 </head>
-
 <body>
-
-    <h1>¡SUPER BONU$ DE BIENVENIDA!</h1>
-
-    <!-- Logo insertado con clase correcta -->
-    <img class="logo" 
-         src="1764908451022.jpg" 
-         alt="Logo">
-
-    <div class="box">
-        <p style="font-size: 18px; margin-bottom: 10px;">
-            Escribinos apretando el botón de abajo
-        </p>
-
-        <a 
-            class="btn-wsp" 
-            href="https://wa.me/5493875651186" 
-            target="_blank"
-            onclick="fbq('track', 'Contact');">
-            WHATSAPP OFFICIAL
-        </a>
-
-        <p style="font-size: 15px; margin-top: 10px;">
-            ATENCIÓN Y RETIROS SIN LÍMITES LAS 24 HS
-        </p>
+<div class="container">
+    <div class="logo">
+        <span class="icon">🃏</span>
+        GANAMOS.NET
     </div>
-
-    <table>
-        <tr>
-            <td>¡SUPER BONU$!</td>
-            <td>2000</td>
-            <td>4000</td>
-        </tr>
-    </table>
-
+    <div class="vip-text">ACCESO VIP EXCLUSIVO</div>
+    <div class="bonus">
+        BONO <span class="percent">100%</span>
+    </div>
+    <input type="text" class="input-name" placeholder="Ingresa tu nombre" />
+    <a href="https://wa.me/543875651186" target="_blank" class="btn-whatsapp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558 .064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+        OBTENER MI BONO AHORA
+    </a>
+</div>
 </body>
 </html>
