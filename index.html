@@ -1,49 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plataforma Verificada</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plataforma Verificada - Casino</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fafafa;
+      --accent:#2fb06a; /* verde */
+      --accent-2:#25c2c1; /* teal */
+      --dark:#111;
+      --muted:#9aa3a8;
+      --red:#e45b5b;
+      --card-bg:#fff;
+      --width:720px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--dark);display:flex;align-items:flex-start;justify-content:center;padding:40px 16px;}
+    .wrap{width:100%;max-width:var(--width);background:var(--card-bg);padding:34px;border-radius:10px;box-shadow:0 8px 30px rgba(20,20,30,0.06);text-align:center}
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1398214718537833');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1398214718537833&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
+    .avatar{width:110px;height:110px;border-radius:50%;background:linear-gradient(180deg,#3ab0d7 0%,#0fa0c0 100%);display:inline-flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    /* placeholder for the jester image */
+    .avatar img{width:86px;height:86px;border-radius:50%}
 
+    h1{margin:6px 0 0;font-size:24px;font-weight:700}
+    h1 .check{display:inline-block;margin-left:8px;background:linear-gradient(90deg,#17ad53,#34d08b);color:white;padding:4px 8px;border-radius:6px;font-size:14px;vertical-align:middle}
+    .subtitle{color:var(--accent);margin-top:6px;font-weight:600}
+
+    .status{display:inline-block;background:#111;color:#fff;padding:12px 18px;border-radius:12px;margin:18px 0;width:100%;max-width:620px}
+
+    .btn{display:block;text-decoration:none;padding:18px 22px;border-radius:30px;font-weight:700;margin:12px auto;max-width:680px}
+    .btn.green{background:linear-gradient(90deg,#2fb06a,#23a85a);color:#fff}
+    .btn.teal{background:linear-gradient(90deg,#25c2c1,#36d6d2);color:#fff}
+    .btn.red{background:linear-gradient(90deg,#ef6b6b,#e14b4b);color:#fff}
+
+    .rating{background:linear-gradient(180deg,#f6f8f9,#fff);padding:14px;border-radius:8px;margin:12px auto;max-width:640px;color:#333;border:1px solid rgba(0,0,0,0.04)}
+    .rating small{color:var(--muted)}
+
+    /* responsive small screens */
+    @media (max-width:480px){
+      .avatar{width:86px;height:86px}
+      h1{font-size:20px}
+      .status{padding:10px}
+      .btn{padding:14px}
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <img src="file_000000009fec71f5be7741ca822b800a.png" alt="logo" class="logo" />
+  <main class="wrap">
+    <div class="avatar">
+      <!-- si querés usar la imagen del personaje subila y reemplaza el src -->
+      <img src="https://i.imgur.com/3y5ZQqG.png" alt="avatar">
+    </div>
 
-    <div class="verified">Plataforma Verificada ✅</div>
-    <div class="trusted">Casino de Confianza</div>
+    <h1>Plataforma Verificada <span class="check">✔</span></h1>
+    <div class="subtitle">Casino de Confianza</div>
 
-    <div class="box">Hacé clic en el botón y nuestro equipo te atenderá por WhatsApp.</div>
+    <div class="status">Te estamos conectando con nuestro equipo vía WhatsApp.</div>
 
-    <!-- BOTÓN WHATSAPP -->
-    <a 
-      href="https://wa.me/54911XXXXXXXX" 
-      class="btn-wa"
-      onclick="fbq('track', 'Contact');"
-    >
-      Contactar por WhatsApp
-    </a>
+    <a class="btn green" href="#" role="button">Ir a WhatsApp Ahora</a>
 
-  </div>
+    <a class="btn teal" href="#">+10.000 CLIENTES GANANDO todos los días</a>
+
+    <div class="rating">"Excelente" ⭐⭐⭐⭐⭐ – Calificación 4.9/5 <br><small style="display:block;margin-top:6px;color:var(--muted)">Opiniones reales de jugadores</small></div>
+
+    <a class="btn red" href="#">🎁 BONO ACTIVO AL 200% – ¡Solicitalo ahora por WhatsApp!</a>
+
+  </main>
 </body>
 </html>
