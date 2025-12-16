@@ -111,15 +111,14 @@ h1 {
         Escribinos apretando el botón de abajo
     </p>
 
-    <!-- BOTÓN WHATSAPP + EVENTO PRO -->
+    <!-- BOTÓN WHATSAPP + EVENTO PRO MEJORADO -->
     <a 
         class="btn-wsp"
         href="https://wa.me/541165667712"
         target="_blank"
-        onclick="fbq('track', 'Contact', {
-          content_name: 'WhatsApp Oficial',
-          method: 'WhatsApp'
-        });">
+        onclick="event.preventDefault(); 
+                 fbq('track', 'Contact', { content_name: 'WhatsApp Oficial', method: 'WhatsApp' }); 
+                 setTimeout(() => { window.open('https://wa.me/541165667712', '_blank'); }, 200);">
         WHATSAPP OFICIAL
     </a>
 
