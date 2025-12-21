@@ -42,17 +42,17 @@ src="https://www.facebook.com/tr?id=1398214718537833&ev=PageView&noscript=1"/>
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #5b0aa6, #2b003f);
-    color: white;
+    background: #ffffff;
+    color: #2b003f;
     text-align: center;
 }
 
 h1 {
     margin-top: 40px;
-    font-size: 32px;
-    color: #ffdf37;
-    font-weight: 800;
-    text-shadow: 0 0 12px rgba(255, 216, 60, 0.6);
+    font-size: 34px;
+    color: #d4af37; /* dorado premium */
+    font-weight: 900;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
 }
 
 .logo {
@@ -64,35 +64,42 @@ h1 {
 
 .box {
     margin: 30px auto;
-    padding: 25px;
+    padding: 30px;
     width: 90%;
-    max-width: 500px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    max-width: 520px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #ffffff, #fdf6e3);
+    border: 2px solid #d4af37;
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.25), 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .btn-wsp {
     display: block;
-    margin: 20px auto;
+    margin: 25px auto;
     width: 80%;
-    padding: 18px;
+    padding: 20px;
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 800;
     border-radius: 50px;
-    background: #00d960;
-    color: white;
+    background: linear-gradient(45deg, #00d960, #00ff73);
+    color: #ffffff;
     text-decoration: none;
-    box-shadow: 0 0 15px #00d960;
-    animation: glow 1.8s infinite ease-in-out;
+    box-shadow: 0 0 20px #00ff73, 0 0 10px #00d960 inset;
+    transition: all 0.3s ease-in-out;
 }
 
-@keyframes glow {
-    0% { box-shadow: 0 0 12px #00d960; }
-    50% { box-shadow: 0 0 30px #00ff73; }
-    100% { box-shadow: 0 0 12px #00d960; }
+.btn-wsp:hover {
+    box-shadow: 0 0 30px #00ff73, 0 0 15px #00d960 inset;
+    transform: scale(1.05);
+}
+
+p {
+    color: #2b003f;
+}
+
+p.small {
+    font-size: 13px;
+    opacity: 0.8;
 }
 </style>
 </head>
@@ -126,7 +133,7 @@ h1 {
         ATENCIÓN Y RETIROS SIN LÍMITES LAS 24 HS
     </p>
 
-    <p style="font-size: 13px; opacity: 0.8;">
+    <p class="small">
         Plataforma segura • Atención personalizada
     </p>
 </div>
